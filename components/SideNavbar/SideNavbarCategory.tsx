@@ -1,53 +1,98 @@
-import { FC } from 'react'
-import { FaAngleDown } from 'react-icons/fa'
+
+import { FC, useState, useEffect, MutableRefObject } from 'react'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
+
+
 import { SideNavbarElement } from './SideNavbarElement'
-import type { ISidebar, Category } from '../../types'
+
+import useOnClickOutside from 'hooks/useOnClickOutside'
+import type { ISidebar } from '../../types'
+
+import { Icons } from 'components/icons'
+
+const categoriesToUppercase = ['ai']
+const exceptions: Record<string, string> = {
+  youtube: 'YouTube',
+}
+
+const capitalizeCategory = (category: string) => {
+  const lowerCaseCategory = category.toLowerCase()
+
+  if (exceptions[lowerCaseCategory]) {
+    return exceptions[lowerCaseCategory]
+  }
+
+  return category
+    .split('-')
+    .map((word) =>
+      categoriesToUppercase.includes(word.toLowerCase())
+        ? word.toUpperCase()
+        : word.charAt(0).toUpperCase() + word.slice(1)
+    )
+    .join(' ')
+}
 
 export const SideNavbarCategory: FC<{
-  item: ISidebar
-  handleToggle: (category: Category, isOpen: boolean) => void
-  isOpen: boolean
-}> = (props) => {
-  const { item, isOpen } = props
+  categoryData: ISidebar
+  expand: boolean
+  listRef: MutableRefObject<HTMLUListElement | null>
+}> = ({ categoryData, expand, listRef }) => {
+
+  const [isOpen, setIsOpen] = useState(expand)
+  const router = useRouter()
+  const { category, subcategory } = categoryData
+
+  const sortedSubcategoryList = subcategory
+    .sort((a, b) => (a.name.toUpperCase() < b.name.toUpperCase() ? -1 : 1))
+    .map((subcategoryData, i) => (
+      <li className="-ml-0.5" key={i}>
+        <SideNavbarElement category={category} subcat={subcategoryData} />
+      </li>
+    ))
+
+  useEffect(() => {
+    setIsOpen(expand)
+  }, [expand])
+
 
   const handleToggle = () => {
-    props.handleToggle(item.category, isOpen)
+    setIsOpen(!isOpen)
   }
 
-  let subcategoryList = null
-
-  if (props.isOpen) {
-    subcategoryList = (
-      <ul className="relative ml-1 border-l-2 border-slate-300 dark:border-slate-700 -pl-0.5">
-        {item.subcategory
-          .sort((a, b) =>
-            a.name.toUpperCase() < b.name.toUpperCase() ? -1 : 1
-          )
-          .map((list, i) => {
-            return (
-              <li className="-ml-0.5" key={i}>
-                <SideNavbarElement {...list} />
-              </li>
-            )
-          })}
-      </ul>
-    )
+  const handleClickOutside = async () => {
+    setIsOpen(false)
+    router.replace('/')
   }
+
+  useOnClickOutside(listRef, handleClickOutside)
 
   return (
-    <li className="mb-2">
-      <button
-        className="flex w-full cursor-pointer justify-between py-2 text-violet-600 dark:text-violet-400 dark:bg-opacity-5 hover:text-violet-500 dark:hover:text-violet-300 rounded-md focus-visible:outline-none focus-visible:ring focus-visible:ring-violet-400"
+    <li className="w-full transition-all ease-in-out text-primary dark:text-theme-primary dark:bg-opacity-5 hover:text-theme-secondary dark:hover:text-theme-primary rounded-md focus-visible:outline-none focus-visible:ring focus-visible:ring-theme-primary">
+      <Link
+        className="flex w-full cursor-pointer justify-between py-2"
         onClick={handleToggle}
+        aria-label={`toggle ${category.toLowerCase()} category`}
+        href={`/${category}`}
       >
-        <h2 className="font-bold uppercase">{item.category}</h2>
-        <FaAngleDown
-          className={`${
-            isOpen && 'rotate-180'
-          } self-center transition duration-300 ease-in-out`}
+        <h1
+          className={`text-slate-500 dark:text-slate-300 text-lg font-sans font-medium w-4/5 truncate ${category.length < 4 ? 'uppercase' : 'capitalize'
+            }`}
+        >
+          {capitalizeCategory(category)}
+        </h1>
+        <Icons.angleDown
+          className={`${isOpen && 'rotate-180'
+            } h-5 w-5 text-slate-500 dark:text-slate-300 self-center transition duration-300 ease-in-out`}
         />
-      </button>
-      {subcategoryList}
+      </Link>
+
+      <div
+        className={`overflow-hidden transition-all duration-500 ease-in-out max-h-0 ${isOpen ? 'max-h-screen' : ''
+          }`}
+      >
+        <ul className="">{sortedSubcategoryList}</ul>
+      </div>
     </li>
   )
 }

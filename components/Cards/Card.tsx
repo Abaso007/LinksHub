@@ -1,53 +1,83 @@
-import { FC,useState, useRef, useEffect } from 'react'
-import { BsBoxArrowUpRight } from 'react-icons/bs'
-import { CopyToClipboard } from 'components/CopyToClipboard'
-import type { IData } from 'types'
 
-const Card: FC<{ data: IData }> = (props) => {
-  const { data } = props
-  const { name, description, url } = data
-  const descriptionRef = useRef(document.createElement("p"));
-  const [isOverflow, setIsOverflow] = useState(false);
-  useEffect (() => {
-    setIsOverflow(descriptionRef.current?.scrollHeight > descriptionRef.current?.offsetHeight);
+import { FC, useState, useRef, useEffect } from 'react'
+import { BsYoutube, BsPen } from 'react-icons/bs'
+import { AiOutlineRead } from 'react-icons/ai'
+import { HiOutlineExternalLink } from 'react-icons/hi'
+import { CopyToClipboard } from 'components/CopyToClipboard/CopyToClipboard'
+import type { IData } from 'types'
+import Bookmark from 'components/Bookmark/Bookmark'
+
+interface CardProps {
+  data: IData,
+  onClick: () => void
+}
+
+export const Card: FC<CardProps> = ({ data, onClick }) => {
+  const { name, description, url, subcategory } = data
+  const descriptionRef = useRef<HTMLParagraphElement>(null)
+  const [isOverflow, setIsOverflow] = useState(false)
+  const youtubeRegex = /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/.+$/
+
+  useEffect(() => {
+    if (descriptionRef.current) {
+      setIsOverflow(
+        descriptionRef.current.scrollHeight >
+          descriptionRef.current.offsetHeight
+      )
+    }
   }, [])
 
   return (
-    <article className="z-10 h-full w-full rounded-3xl border border-dashed border-violet-500 dark:border-violet-400 bg-gray-100 shadow-lg dark:bg-gray-900 dark:text-gray-300 dark:shadow-sm">
+    <article className="z-10 h-full border border-theme-secondary/25 dark:border dark:border-theme-primary dark:border-opacity-8 w-full rounded-3xl dark:bg-slate-800 dark:text-text-primary dark:shadow-sm bg-theme-primary-light">
       <div className="card-body">
-        <header className="flex justify-between items-center">
+        <header className="flex justify-between items-center gap-2">
           <h2
-            className="cursor-default truncate ... text-xl text-violet-600 dark:text-violet-400"
+            className="cursor-default md:truncate ... text-lg md:text-xl dark:text-light-primary"
             title={name}
           >
             {name}
           </h2>
-          <CopyToClipboard url={url} />
+          <div className="flex items-center gap-1">
+            <Bookmark />
+          </div>
         </header>
         <div className="h-[7rem]">
-          <p ref={descriptionRef} className="h-24 w-full overflow-hidden font-sans text-ellipsis line-clamp-4">{description}</p>
-          {
-            (isOverflow) && 
-            <p className="text-sm underline text-violet-600 dark:text-violet-400 text-right hover:text-violet-400 dark:hover:text-violet-300" >Read More</p>
-          }
+          <div
+            ref={descriptionRef}
+            className="h-24 w-full overflow-hidden font-sans text-ellipsis line-clamp-4"
+          >
+            {description}
+          </div>
+          {isOverflow && (
+            <span onClick={onClick} className="text-sm float-right hover:underline dark:hover:text-theme-primary text-right hover:text-theme-primary dark:text-text-primary">
+              ...Read More
+            </span>
+          )}
         </div>
-        <footer className="card-actions justify-end">
+        <footer className="grid grid-cols-2 gap-x-4 md:grid-cols-1 lg:grid-cols-2">
+        <CopyToClipboard url={url} />
           <a
             onClick={(e) => e.stopPropagation()}
             href={url}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className={
-              'mt-2 flex w-full items-center justify-center gap-2 rounded-2xl border border-dashed border-transparent bg-violet-600 px-6 py-2 text-center text-white duration-100 hover:border-violet-400 hover:bg-transparent hover:text-violet-500 dark:hover:text-violet-400'
+              'mt-2 flex w-full items-center justify-center gap-2 rounded-lg  bg-theme-secondary px-3 py-2 text-center text-light-primary duration-100'
             }
           >
-            Visit site
-            <BsBoxArrowUpRight />
+            <span className='truncate ...'>Visit site</span>
+            {youtubeRegex.test(url) ? (
+              <BsYoutube size="1.3em" />
+            ) : subcategory === 'e_book' ? (
+              <AiOutlineRead size="1.3em" />
+            ) : subcategory === 'technical_writing_tools' ? (
+              <BsPen size="1.2em" />
+            ) : (
+              <HiOutlineExternalLink size="1.3em" />
+            )}
           </a>
         </footer>
       </div>
     </article>
   )
 }
-
-export default Card

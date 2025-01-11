@@ -1,12 +1,5 @@
 [
   {
-    "name": "Postman",
-    "description": "It is an API Platform for developers to design, build, test and iterate their APIs.",
-    "url": "https://www.postman.com/",
-    "category": "other",
-    "subcategory": "devtools"
-  },
-  {
     "name": "VSCodium",
     "description": "VSCodium is free/libre Open Source Software Binaries of VS Code.",
     "url": "https://github.com/VSCodium/vscodium",
@@ -36,14 +29,14 @@
   },
   {
     "name": "CodeSandbox",
-    "description": "This IDE will make it easier for you to code. You can get any design you want as well as filter it by framework,dependiences, and tags.",
+    "description": "This IDE will make it easier for you to code. You can get any design you want as well as filter it by framework,dependencies, and tags.",
     "url": "https://codesandbox.io/search?refinementList",
     "category": "other",
     "subcategory": "devtools"
   },
   {
     "name": "OpenSauced",
-    "description": "OpenSauced is a great tool to display your merged and opened pull requests, highlight your favorite contributions, and find other open source projects to contribute to!",
+    "description": "OpenSauced is a great tool to display your merged and opened pull requests, highlight your favorite contributions, and find other open-source projects to contribute to!",
     "url": "https://opensauced.pizza/",
     "category": "other",
     "subcategory": "devtools"
@@ -66,7 +59,98 @@
     "name": "AI search engine for developers",
     "description": "Phind is a search engine that simply tells users what the answer is. It is optimized for developers and technical questions.",
     "url": "https://www.phind.com/",
-    "category": "Other",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "SmallDevTools",
+    "description": "This website has a collection of useful tools for developers in a minimal UI.",
+    "url": "https://smalldev.tools/",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "Devhints",
+    "description": "This website has over 358 curated cheatsheets, by developers for developers.",
+    "url": "https://devhints.io/",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "Killercoda",
+    "description": "Killercoda is a place where you open your browser and get instant access to a real Linux or Kubernetes environment ready to use.",
+    "url": "https://killercoda.com/",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "Compress jpeg",
+    "description": "This website will help you to compress your jpeg images.",
+    "url": "https://compressjpeg.com/",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "Picresize",
+    "description": "This website will help you to resize your images.",
+    "url": "https://picresize.com/",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "Tinypng",
+    "description": "This website will help you to compress your png images.",
+    "url": "https://tinypng.com/",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "Image Compressor",
+    "description": "This website will help you to compress your images.",
+    "url": "https://imagecompressor.com/",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "Dr Link Check",
+    "description": "Dr. Link Check is a valuable tool that helps website owners identify and address broken links on their websites. Broken links can negatively impact user experience, search engine rankings, and overall site credibility.    ",
+    "url": "https://www.drlinkcheck.com/",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "Dracula Theme",
+    "description": "Dracula is a color scheme for code editors and terminal emulators such as Vim, Notepad++, iTerm, VSCode, Terminal.app, ZSH, and much more.",
+    "url": "https://draculatheme.com/",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "Responsively",
+    "description": "A modified web browser that helps in responsive web development. A web developer's must have dev tool.",
+    "url": "https://responsively.app",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "Uptime Kuma",
+    "description": "Uptime Kuma is an easy-to-use self-hosted monitoring tool.",
+    "url": "https://uptime.kuma.pet",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "HackMD",
+    "description": "A cross-platform Markdown editor for collaboration in real-time, and offers variety of 3rd api parties to connect.",
+    "url": "https://hackmd.io/",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "Can I Use",
+    "description": "Can I use is a valuable web tool that helps developers check browser support for various web technologies, including CSS, HTML5, JavaScript, and APIs. It provides up-to-date compatibility data for different browsers and versions, helping developers ensure cross-browser functionality in their projects.",
+    "url": "https://caniuse.com/",
+    "category": "other",
     "subcategory": "devtools"
   }
 ]

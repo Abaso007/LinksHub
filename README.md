@@ -1,34 +1,65 @@
 <article align="center">
-<img src="https://user-images.githubusercontent.com/78981177/232279811-a219b1b5-6383-4ace-9614-24c6b258fec0.png" alt="LinksHub Logo" />
+
+![LinksHub-Banner](https://github.com/rupali-codes/LinksHub/assets/78981177/71b82c9a-9343-4854-b5cd-946193295759)
+
 </article><hr>
-
-## Table of Contents
-
-  - [Welcome to LinksHub 👋](#welcome-to-linkshub-)
-  - [Demo 💻](#demo-)
-  - [Tech stack 📚](#tech-stack-)
-  - [Socials 📱](#socials-)
-  - [Getting Started 👩‍💻](#getting-started-)
-  - [Let's jump right in🌟](#lets-jump-right-in)
-  - [_Want to add your favorite links into the Hub? make sure to follow CONTRIBUTING guidelines._](#want-to-add-your-favorite-links-into-the-hub-make-sure-to-follow-contributing-guidelines)
-  - [Building with Gitpod 💣](#building-with-gitpod-)
-  - [Our Contributors ✨](#our-contributors-)
-  - [License 📝](#license-)
-  - [Support ⭐](#support-)
 
 <a name="welcome-to-linkshub"></a>
 
 # Welcome to LinksHub 👋
 
-LinksHub is a Hub of Links `For Developers By Developers`. Here, we've gathered a collection of all the best and most useful resources, both free and paid, to aid in the development journey.
+LinksHub is a hub of links made for and by the community. Whether you're a new developer, a seasoned technical writer, or a customer service representative looking to learn how to code, we got the resources you need to aid you in your learning journey.
 
-We recognize that there's a wealth of information available, but often, it's a matter of knowing where to find it. That's why we've made it our mission to bring the right resources to the right developers.
+We recognize that there's a wealth of information available, but often, it's a matter of knowing where to find it. That's why we've made it our mission to bring the right resources to you.
+<a name="Outreach"></a>
+
+## Outreach
+
+We are passionate about helping people from all backgrounds start their open source journey. Here are some initiatives that we have partaken in:
+ <table>
+  <tr>
+    <th>Name</th>
+    <th>Logo</th>
+    <th>Purpose</th>
+  </tr>
+  <tr>
+    <td>Product Hunt</td>
+    <td><a href="https://www.producthunt.com/posts/linkshub?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-linkshub" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=437087&theme=light" alt="LinksHub - A&#0032;hub&#0032;of&#0032;ready&#0045;to&#0045;use&#0032;tech&#0032;resources | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a></td>
+    <td> A platform where people launch different kind of products/projects and share them with the community </td>
+  </tr>
+  <tr>
+    <td>GirlScript Summer of Code 2023 </td>
+    <td><img src="https://github.com/rupali-codes/LinksHub/assets/105683440/3ce6a1f0-0b6a-44e5-9a78-842bae0a670d" alt="a white background with the text, GirlScript Summer of Code next to an orange flower"></td>
+    <td>  3-month summer
+open source program with a mission to help students from India and beyond in developing their technical skills </td>
+  </tr>
+  <tr>
+    <td>Hacktoberfest 2023 </td>
+    <td><img src="https://github.com/Anmol-Baranwal/LinksHub/assets/74038190/8785b289-e964-4986-98b2-19817ce31a7f" alt="a black background with the official logo of Hacktoberfest 2023"></td>
+    <td>  Hacktoberfest is a month-long October event welcoming all skill levels to join the open source community, contribute quality pull requests on GitHub, and earn cool swag. </td>
+  </tr>
+</table>
+
+
+## Table of Contents
+
+- [Welcome to LinksHub 👋](#welcome-to-linkshub-)
+  - [Outreach](#outreach)
+  - [Table of Contents](#table-of-contents)
+  - [Live demo 💻](#live-demo-)
+  - [Tech stack 📚](#tech-stack-)
+  - [Socials 📱](#socials-)
+  - [Want to Contribute? 👩‍💻](#want-to-contribute-)
+  - [Building with Gitpod | Codespaces 💣](#building-with-gitpod--codespaces-)
+  - [Maintainers 🤝](#maintainers-)
+  - [Top 50 Contributors ✨](#top-50-contributors-)
+  - [License 📝](#license-)
+  - [Support ⭐](#support-)
 
 <a name="demo"></a>
+## Live demo 💻
 
-## Demo 💻
-
-You can see the live demo at: https://linkshub.vercel.app
+Visit https://linkshub.dev to see the live demo!
 
 <a name="tech-stack"></a>
 
@@ -50,114 +81,90 @@ You can see the live demo at: https://linkshub.vercel.app
 
 ## Socials 📱
 
-* [Join LinksHub community on Discord](https://discord.com/invite/NvK67YnJX5) 
-* [Tag us on Twitter](https://twitter.com/the_linkshub)
+Connect with us for future updates
+
+- Join the LinksHub community on [Discord](https://discord.com/invite/NvK67YnJX5) <img src="https://github.com/rupali-codes/LinksHub/assets/74038190/0a9bece0-8378-4620-bcf5-0f6e4b1aa6bd" alt="Discord" width="20" height="20"  align="center">.
+- Follow us on [X (Twitter) ](https://twitter.com/linkshubdotdev) <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/x-social-media-logo-icon.png" alt="Discord" width="25" height="25"  align="center"> 
+ for updates. 
+- Follow us on [LinkedIn](https://www.linkedin.com/company/linkshub-dev/) <img src="https://github.com/shelar1423/LinksHub/assets/82649533/08ffebb8-68a1-4cd1-9078-97f284de5cef" alt="Discord" width="18" height="18"  align="center">  to stay in touch.
 
 
 ---
 
-<a name="getting-started"></a>
+<a name="want-to-contribute"></a>
 
-## Getting Started 👩‍💻
+## Want to Contribute? 👩‍💻
 
-> ⚠️Prerequisites
->
-> - Before getting into, it make you sure you have [pnpm](https://nodejs.org/download) installed.
->
-> - Also, make sure to follow [CONTRIBUTING guidelines](https://github.com/rupali-codes/LinksHub/blob/main/CONTRIBUTING.md)
+Please follow our [CONTRIBUTING guidelines](https://github.com/rupali-codes/LinksHub/blob/main/CONTRIBUTING.md) for the following:-
 
-### Let's jump right in🌟
+- Setup LinksHub on your local machine
+- Append new Categories
+- Append new Links
+- Adding or Updating category description
+- And more!
 
-1. [Fork](https://github.com/rupali-codes/LinksHub/fork) the project
-2. Clone the project to run on your local machine using the following command
-
-   ```sh
-   git clone https://github.com/<your_github_username>/LinksHub.git
-   ```
-
-3. Get into the root directory
-
-   ```sh
-   cd LinksHub
-   ```
-
-4. Install all dependencies by running
-
-   ```sh
-   pnpm install
-   ```
-
-5. Create your branch
-
-   ```sh
-   git checkout -b <your_branch_name>
-   ```
-
-6. To run and view the application on localhost
-
-   ```sh
-   pnpm run dev
-   ```
-
-7. Make your changes
-
-8. Stage your changes
-
-   ```sh
-   git add <filename>
-   ```
-
-9. Commit your changes
-
-   ```sh
-   git commit -m <your-commit-message>
-   ```
-
-10. Push your changes into your branch
-
-    ```sh
-    git push origin <your_branch_name>
-    ```
-
-11. Create a [Pull Request](https://github.com/rupali-codes/linkshub/compare)
-
-    > Click _compare across forks_ if you don't see your branch
-
-#### _Want to add your favorite links into the Hub? make sure to follow [CONTRIBUTING guidelines](https://github.com/rupali-codes/linkshub/blob/main/CONTRIBUTING.md)._
-
----
 
 <a name="building-with-gitpod"></a>
 
-## Building with Gitpod 💣
+## Building with Gitpod | Codespaces 💣
 
-By using [Gitpod.io](https://www.gitpod.io), all the necessary dependencies will be installed
-and the website will be built in one single click. No extra setup is required.
+Want to avoid the complexities of setting up a local environment or just need to make quick edits? Consider using [Gitpod.io](https://gitpod.io/#https://github.com/rupali-codes/LinksHub) or [Codespaces](https://codespaces.new/rupali-codes/LinksHub). They streamline the process by automatically installing required dependencies, making it effortless to contribute in just one click!:)
 
-[![Gitpod Ready-to-Code](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/rupali-codes/LinksHub)
+---
+
+## Maintainers 🤝
+
+Need help while contributing? Tag any of the maintainers when creating the issue. You can tag us using: `@username`
+
+<table>
+<tr>
+<td align="center" width="200"><pre><a href="https://github.com/rupali-codes"><img src="https://avatars.githubusercontent.com/u/78981177?v=4" width="200" alt="GitHub Profile picture of Rupali Haldiya" /><br><sub>Rupali Haldiya</sub></a><br>@rupali-codes</pre></td>
+<td align="center" width="200"><pre><a href="https://github.com/CBID2"><img src="https://avatars.githubusercontent.com/u/105683440?v=4" width="200" alt="GitHub Profile picture of Christine Belzie" /><br><sub>Christine Belzie</sub></a><br>@CBID2</pre></td>
+<td align="center" width="200"><pre><a href="https://github.com/Anmol-Baranwal"><img src="https://avatars.githubusercontent.com/u/74038190?v=4" width="200" alt="GitHub Profile picture of Anmol Baranwal" /><br><sub>Anmol Baranwal</sub></a><br>@Anmol-Baranwal</pre></td>
+<td align="center" width="200"><pre><a href="https://github.com/aftabrehan"><img src="https://avatars.githubusercontent.com/u/93012310?v=4" width="200" alt="GitHub Profile Picture of Aftab Rehan"/><br><sub>Aftab Rehan</sub></a><br>@aftabrehan</pre></td>
+
+</tr>
+</table>
+
+
 
 ---
 
 <a name="our-contributors"></a>
 
-## Our Contributors ✨
+## Top 50 Contributors ✨
 
-We would like to express our sincere gratitude to all the contributors who have helped make LinksHub an invaluable resource for developers. Without your contributions, this project wouldn't have been possible. Thank you so much for your time, efforts, and dedication.
+We would like to express our sincere gratitude to all the contributors who have helped make LinksHub an invaluable resource for developers! Without your contributions, this project wouldn't have been possible. Thank you so much for your time, effort, and dedication! 😄
 
 <a href="https://github.com/rupali-codes/LinksHub/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=rupali-codes/LinksHub" />
+  <img src="https://contrib.rocks/image?max=50&repo=rupali-codes/LinksHub" />
 </a>
+
+_View the list of all contributors [here](https://github.com/rupali-codes/LinksHub/graphs/contributors)._
 
 <a name="license"></a>
 
 ## License 📝
 
-LinksHub is licensed under the terms of MIT License. check out [LICENSE](https://github.com/rupali-codes/LinksHub/blob/main/LICENSE) for details.
+
+<table>
+  <tr>
+     <td>
+       <p align="center"> <img src="https://github.com/rupali-codes/LinksHub/assets/66154908/65ae0c03-9cad-47a6-80b8-23c91cd2ac4e" width="80%"></img>
+    </td>
+    <td> 
+      <img src="https://img.shields.io/badge/License-MIT-yellow.svg"/> <br> 
+LinksHub is licensed under the terms of the MIT License. check out <a href="./LICENSE">LICENSE</a> for details. <img width=2300/>
+    </td>
+  </tr>
+</table>
+
 
 <a name="support"></a>
 
 ## Support ⭐
 
-_We would love to have you, feel free to open issues and pull requests and Don't forget to leave a star⭐_
-
-_We would be absolutely thrilled to have you contribute to LinksHub! Your support, whether through opening issues, submitting pull requests, or even just leaving a star, means a lot to us. Together, we can continue to improve and expand this resource hub for developers worldwide._
+- 💰 Become our [Sponsor](https://github.com/sponsors/rupali-codes)!
+- ⭐ Star our Repo 
+- 🥇  Rate us on [Repo Rater](https://repo-rater.eddiehub.io/)
+Together, we can continue to improve and expand this resource hub for people worldwide! 💪

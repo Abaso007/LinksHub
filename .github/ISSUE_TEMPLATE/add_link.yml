@@ -1,7 +1,7 @@
-name: New Link 🔗
-description: Use this to add new link into the Hub
-title: "[Add] <write what you want to add>"
-labels: ["chore", "goal: new-link"]
+name: New Link(s) 🔗
+description: Use this to add new link(s) into the Hub
+title: '[Add] <write what you want to add>'
+labels: ['chore', 'goal: new-link', 'priority: low', 'good first issue']
 body:
   - type: input
     attributes:
@@ -20,11 +20,29 @@ body:
       options:
         - Frontend
         - Backend
-        - ML, AI & Data
-        - Youtube
+        - CMS Toolkit
+        - Artificial Intelligence
+        - AI Tools
+        - Internet Of Things
+        - Cloud Computing
+        - DevOps
+        - Design
+        - Competitive Programming
+        - Theory Of Computation
+        - Data Structures
+        - Mobile
+        - Game Development
         - Resources
+        - Quality Assurance
         - Languages
         - Open Source
+        - Technical Writing
+        - Tech Articles
+        - Newsletters
+        - Cyber Security
+        - Ethical Hacking
+        - BlockChain
+        - Placement Prep.
         - Other
     validations:
       required: true
@@ -37,16 +55,13 @@ body:
   - type: checkboxes
     id: no-duplicate-issues
     attributes:
-      label: "Checklist"
+      label: 'Checklist'
       options:
-        - label: "I have checked the existing issues"
+        - label: 'I have checked the existing issues'
           required: true
 
-        - label: "I have read the [Contributing Guidelines](https://github.com/rupali-codes/LinksHub/blob/main/CONTRIBUTING.md)"
+        - label: 'I have read the [Contributing Guidelines](https://github.com/rupali-codes/LinksHub/blob/main/CONTRIBUTING.md)'
           required: true
 
-        - label: "I am willing to work on this issue (optional)"
-          required: false
-        
-        - label: "I am a GSSoC'23 contributor"
+        - label: 'I am willing to work on this issue (optional)'
           required: false

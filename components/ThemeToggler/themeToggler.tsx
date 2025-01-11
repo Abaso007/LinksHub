@@ -1,33 +1,57 @@
-import { useState, useEffect } from "react";
-import { useTheme } from "next-themes";
+import { useState, useEffect } from 'react'
+import { useTheme } from 'next-themes'
 
-import { HiSun, HiMoon } from "react-icons/hi";
+import { Helmet, HelmetProvider } from 'react-helmet-async'
+import { Icons } from 'components/icons'
 
 export function ThemeToggler() {
-  const { resolvedTheme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
+    setMounted(true)
+  }, [])
 
-  if (!mounted) return <></>;
+  if (!mounted) {
+    return null
+  }
+
+  const handleThemeToggle = () => {
+    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
+  }
+
+  const themeColor = resolvedTheme === 'dark' ? '#0F172A' : '#F5F3FF'
+  const capitalizedTheme = resolvedTheme === "dark" ? "Light" : "Dark";
 
   return (
-    <button
-      onClick={() => {
-        setTheme(resolvedTheme === "dark" ? "light" : "dark");
-      }}
-      title={`Toggle dark mode (current state: ${resolvedTheme})`}
-    >
-      {resolvedTheme === "dark" ? (
-        <HiSun
-          className="dark:text-gray-200 hover:text-violet-500"
-          size={"1.5rem"}
+    <HelmetProvider>
+      <Helmet>
+        <meta name="theme-color" content={themeColor} />
+        <meta name="msapplication-navbutton-color" content={themeColor} />
+        <meta name="msapplication-TileColor" content={themeColor} />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content={themeColor}
         />
-      ) : (
-        <HiMoon className="hover:text-violet-500" size={"1.5rem"} />
-      )}
-    </button>
-  );
+      </Helmet>
+      <button
+        onClick={handleThemeToggle}
+        title={`${capitalizedTheme} Theme`}
+        className="group w-[32px] h-[32px] flex items-center justify-center rounded-md hover:bg-slate-100 dark:hover:bg-white dark:hover:bg-opacity-20 transition-colors"
+      >
+        {resolvedTheme === 'dark' ? (
+          <Icons.sun
+            data-custom="restrict-click-outside"
+            className="h-6 w-6 text-zinc-600 group-hover:text-primary dark:text-zinc-400 dark:group-hover:text-slate-300"
+          />
+        ) : (
+          <Icons.moon
+            data-custom="restrict-click-outside"
+            className="h-6 w-6 text-zinc-600 group-hover:text-primary dark:text-zinc-400 dark:group-hover:text-slate-300"
+          />
+        )}
+      </button>
+    </HelmetProvider>
+  )
 }
